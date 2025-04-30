@@ -17,12 +17,12 @@ function App() {
     const fetchMemberData = async () => {
       try {
         const teamMembersResponse = await axios.get(`${serverURL}team-members`);
-        if (checkServerStatus.status === 200) {
+        if (teamMembersResponse.status === 200) {
           setTeamMembers(teamMembersResponse.data);
         } else {
           console.error(
             "Server status is not OK. Status code:",
-            checkServerStatus.status
+            teamMembersResponse.status
           );
         }
       } catch (error) {
@@ -38,7 +38,7 @@ function App() {
         } else {
           console.error(
             "Server status is not OK. Status code:",
-            checkServerStatus.status
+            ticketsResponse.status
           );
         }
       } catch (error) {
