@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-const serverURL = "http://45.61.166.8:5000/api/";
+const serverURL = "https://ticket-assignment-system.onrender.com/api";
 function App() {
   const [teamMembers, setTeamMembers] = useState([]);
   const [tickets, setTickets] = useState([]);
